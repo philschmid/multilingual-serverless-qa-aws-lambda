@@ -3,12 +3,12 @@ service: multilingual-qa-api
 provider:
   name: aws # provider
   region: eu-central-1 # aws region
-  memorySize: 5120 # optional, in MB, default is 1024
-  timeout: 70 # optional, in seconds, default is 6
+  memorySize: 10240 # optional, in MB, default is 1024
+  timeout: 300 # optional, in seconds, default is 6
 
 functions:
   questionanswering:
-    image: 891511646143.dkr.ecr.eu-central-1.amazonaws.com/multilingual-lambda@sha256:4d08a8eb6286969a7594e8f15360f2ab6e86b9dd991558989a3b65e214ed0818
+    image: 891511646143.dkr.ecr.eu-central-1.amazonaws.com/multilingual-lambdasha256:4d08a8eb6286969a7594e8f15360f2ab6e86b9dd991558989a3b65e214ed0818
     events:
       - http:
           path: qa # http path
